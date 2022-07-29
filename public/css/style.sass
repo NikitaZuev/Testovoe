@@ -1,0 +1,79 @@
+$c-white-grey: #E3E6EC;
+$c-dark-grey: #474955;
+$c-white: #FFFFFF;
+
+th
+  background-color: $c-dark-grey
+  color: $c-white
+  font-size: 14px
+  cursor: pointer  
+  min-height: 55px
+
+td
+  border: 1px solid $c-white-grey
+  border-spacing: 0;
+  font-size: 13px
+  font-weight: 500;
+  color: $c-dark-grey
+  min-height: 85px
+section
+  width: auto
+  height: 100%
+  padding: 23px 77px 12px 78px
+.input__box
+  position: relative
+  width:  50%
+  &::after
+    content: ""
+    display: block;
+    width: 21px
+    height: 21px
+    background: url("../img/search-svg.svg")
+    position: absolute
+    top: 25%
+    right: 0
+input
+  height: 19px 
+  width: 100%
+  margin-bottom: 15px 
+  background-color: #5A5C66
+  border: none
+  color: $c-white
+  font-size: 14px
+  padding: 18px 0 15px 26px
+  margin-left: 2px 
+  &:focus-visible
+    outline: none
+  &::-webkit-input-placeholder
+    color: #B2B7BF
+table
+  width: 100%
+th,tr,td
+  display: flex;
+  justify-content: center;
+  align-items: center
+.table__title,.table__body
+  justify-content: flex-start
+  padding-left: 10px
+  text-align: left
+tr svg
+  margin-left: 30px;
+th,td
+  width: 45%
+  text-align: center
+.table__id
+  width: 10%
+.foot__navigation
+  display: flex
+  justify-content: space-between;
+  margin: 16px 103px 12px 120px
+button
+  background: none
+  border: none
+  font-size: 24px;
+  font-weight: 500;
+  cursor: pointer
+.page__number
+  font-style: italic
+.page__number.active
+  color: #7EBC3C

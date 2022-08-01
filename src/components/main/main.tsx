@@ -45,11 +45,22 @@ function Main():JSX.Element{
     setSort((event.target as Element).id);
     click == false ? setClick(true) : setClick(false)
   }
+  const searchLimit = (event: React.ChangeEvent<HTMLInputElement>) =>{
+    setSearchQuery(event.target.value)
+    if((event.target.value) != ''){
+      setLimit(100);
+      setPage(0)
+    }
+    else{
+      setLimit(10);
+      setPage(1)
+    }
+  }
 
   return(
     <section>
       <div className='input__box'>
-        <input type="text" placeholder='Поиск' value={searchQuery} onChange={e => setSearchQuery(e.target.value)}></input>
+        <input type="text" placeholder='Поиск' value={searchQuery} onChange={e => searchLimit(e)}></input>
       </div>
       <div>
         <table>

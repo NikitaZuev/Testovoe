@@ -9,7 +9,7 @@ function FootNavigations({page,changePage,totalPosts,pagePrev,pageNext}:Pages):J
       <Link to={`/${page-1}`}><button onClick={()=> pagePrev(page)}>Назад</button></Link> 
       <div>
         {pages.map((p:number)=>
-         <Link  key={p} to={`/${p}`}><button onClick={()=> changePage(p)} className={page === p ? 'page__number active' : 'page__number'}>{p}</button></Link> 
+         <Link  key={p} to={`/${p}`}><button onClick={()=> changePage(p)} className={page === p || page === 0 ? 'page__number active' : 'page__number'}>{p}</button></Link> 
         )}
       </div>
      <Link to={`/${page+1}`}><button onClick={()=> pageNext(page)}>Далее</button></Link> 

@@ -9,6 +9,7 @@ function Posts(props:any):JSX.Element{
           <td className='table__id'>{post.id}</td>
           <td className='table__title'>{post.title}</td>
           <td className='table__body'>{post.body}</td>
+          <td>qwe</td>
         </tr>
       )}
     </>
